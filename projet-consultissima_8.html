@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultissima – Formation managers · Léa Alonso-Fanget</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');  :root {   --teal: #0F6E56;   --teal-mid: #1D9E75;   --teal-light: #E1F5EE;   --teal-border: #9FE1CB;   --ink: #1A1A1A;   --ink-soft: #444;   --muted: #888;   --surface: #F7F6F3;   --white: #FFFFFF;   --border: #E5E3DC;   --max: 900px; }  * { box-sizing: border-box; margin: 0; padding: 0; }  html { scroll-behavior: smooth; }  body {   font-family: 'DM Sans', sans-serif;   font-weight: 400;   color: var(--ink);   background: var(--white);   line-height: 1.7;   -webkit-font-smoothing: antialiased; }  /* ── NAV ── */ nav {   position: fixed; top: 0; left: 0; right: 0; z-index: 100;   background: rgba(255,255,255,0.92);   backdrop-filter: blur(12px);   border-bottom: 1px solid var(--border);   padding: 0 2rem;   height: 56px;   display: flex; align-items: center; justify-content: space-between; } .nav-brand {   font-family: 'Playfair Display', serif;   font-size: 1rem; font-weight: 500;   color: var(--ink); text-decoration: none;   letter-spacing: 0.01em; } .nav-links { display: flex; gap: 2rem; list-style: none; } .nav-links a {   font-size: 0.8125rem; font-weight: 400;   color: var(--muted); text-decoration: none;   letter-spacing: 0.02em;   transition: color 0.2s; } .nav-links a:hover { color: var(--teal); } .nav-links a.active { color: var(--ink); font-weight: 500; }  /* ── LAYOUT ── */ main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; } .pt-nav { padding-top: 56px; }  /* ── HERO ── */ .hero {   padding: 6rem 0 4rem;   border-bottom: 1px solid var(--border); } .hero-eyebrow {   font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;   color: var(--teal); font-weight: 500; margin-bottom: 1.5rem;   display: flex; align-items: center; gap: 0.75rem; } .hero-eyebrow::before {   content: ''; display: inline-block;   width: 24px; height: 1px; background: var(--teal); } .hero h1 {   font-family: 'Playfair Display', serif;   font-size: clamp(2.5rem, 5vw, 3.75rem);   font-weight: 400; line-height: 1.15;   color: var(--ink); margin-bottom: 1.5rem;   letter-spacing: -0.01em; } .hero h1 em { font-style: italic; color: var(--teal); } .hero-sub {   font-size: 1.0625rem; color: var(--ink-soft);   max-width: 560px; line-height: 1.75;   margin-bottom: 2.5rem; } .hero-meta {   display: flex; gap: 2rem; flex-wrap: wrap; } .hero-meta-item {   font-size: 0.8125rem; color: var(--muted);   display: flex; align-items: center; gap: 0.4rem; } .hero-meta-item strong { color: var(--ink); font-weight: 500; }  /* ── PILLARS ── */ .pillars {   display: grid; grid-template-columns: repeat(3, 1fr);   gap: 1px; background: var(--border);   border: 1px solid var(--border); border-radius: 2px;   margin: 4rem 0;   overflow: hidden; } .pillar {   background: var(--white); padding: 2rem 1.75rem; } .pillar-num {   font-family: 'Playfair Display', serif;   font-size: 2rem; color: var(--teal-border);   font-weight: 400; line-height: 1; margin-bottom: 1rem; } .pillar h3 {   font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em;   text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; } .pillar p { font-size: 0.8125rem; color: var(--muted); line-height: 1.6; }  /* ── SECTION TITLE ── */ .section-label {   font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase;   color: var(--teal); font-weight: 500;   display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2.5rem; } .section-label::after {   content: ''; flex: 1; height: 1px; background: var(--border); }  /* ── PROJECT CARDS ── */ .projects { padding: 4rem 0; } .project-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; } .project-card {   background: var(--white);   padding: 2.5rem 2rem;   display: grid; grid-template-columns: 1fr auto;   gap: 1.5rem; align-items: start;   text-decoration: none; color: inherit;   transition: background 0.2s; } .project-card:hover { background: var(--surface); } .project-card:hover .arrow { transform: translate(4px, -4px); } .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; } .tag {   font-size: 0.6875rem; padding: 3px 10px; border-radius: 20px;   background: var(--teal-light); color: var(--teal);   font-weight: 500; letter-spacing: 0.03em;   border: 1px solid var(--teal-border); } .tag.gray { background: var(--surface); color: var(--muted); border-color: var(--border); } .project-title {   font-family: 'Playfair Display', serif;   font-size: 1.375rem; font-weight: 400; margin-bottom: 0.5rem;   color: var(--ink); line-height: 1.3; } .project-desc { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.7; max-width: 520px; } .arrow {   font-size: 1.25rem; color: var(--muted);   transition: transform 0.2s, color 0.2s;   margin-top: 0.25rem; } .project-card:hover .arrow { color: var(--teal); }  /* ── ABOUT STRIP ── */ .about-strip {   background: var(--surface); border-top: 1px solid var(--border);   border-bottom: 1px solid var(--border);   padding: 3.5rem 0; margin: 0 -2rem;   padding-left: 2rem; padding-right: 2rem; } .baseline {   font-family: 'Playfair Display', serif;   font-size: clamp(1.125rem, 2.5vw, 1.5rem);   font-style: italic; color: var(--ink);   max-width: 640px; line-height: 1.5;   margin-bottom: 1rem; } .about-strip p { font-size: 0.875rem; color: var(--muted); max-width: 560px; }  /* ── CONTACT ── */ .contact { padding: 4rem 0; display: flex; gap: 1.5rem; flex-wrap: wrap; } .contact-link {   font-size: 0.8125rem; font-weight: 500;   color: var(--ink); text-decoration: none;   padding: 0.6rem 1.25rem;   border: 1px solid var(--border); border-radius: 2px;   display: flex; align-items: center; gap: 0.5rem;   transition: all 0.2s; letter-spacing: 0.02em; } .contact-link:hover { border-color: var(--teal); color: var(--teal); }  /* ── FOOTER ── */ footer {   border-top: 1px solid var(--border);   padding: 2rem; text-align: center;   font-size: 0.75rem; color: var(--muted); }  /* ── PROJECT PAGE ── */ .project-hero {   padding: 5rem 0 3rem;   border-bottom: 1px solid var(--border); } .back-link {   font-size: 0.8125rem; color: var(--muted);   text-decoration: none; display: inline-flex;   align-items: center; gap: 0.4rem;   margin-bottom: 2.5rem;   transition: color 0.2s; } .back-link:hover { color: var(--teal); } .project-hero-tags { margin-bottom: 1.25rem; display: flex; gap: 6px; flex-wrap: wrap; } .project-hero h1 {   font-family: 'Playfair Display', serif;   font-size: clamp(2rem, 4vw, 2.875rem);   font-weight: 400; line-height: 1.2;   color: var(--ink); margin-bottom: 1rem; } .project-hero-sub { font-size: 1rem; color: var(--ink-soft); max-width: 600px; line-height: 1.75; } .project-meta-bar {   display: flex; gap: 2.5rem; flex-wrap: wrap;   padding: 1.5rem 0; border-top: 1px solid var(--border);   margin-top: 2rem; } .project-meta-item { } .project-meta-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.2rem; } .project-meta-value { font-size: 0.875rem; font-weight: 500; color: var(--ink); }  /* ── KPI ROW ── */ .kpi-row {   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));   gap: 1px; background: var(--border);   border: 1px solid var(--border); border-radius: 2px;   margin: 3rem 0; overflow: hidden; } .kpi-item { background: var(--white); padding: 1.5rem; } .kpi-num {   font-family: 'Playfair Display', serif;   font-size: 1.75rem; color: var(--teal);   font-weight: 400; line-height: 1; margin-bottom: 0.4rem; } .kpi-label { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }  /* ── CONTENT SECTIONS ── */ .content-section { padding: 3rem 0; border-bottom: 1px solid var(--border); } .content-section:last-of-type { border-bottom: none; } .content-section h2 {   font-family: 'Playfair Display', serif;   font-size: 1.375rem; font-weight: 400;   color: var(--ink); margin-bottom: 1.5rem; } .content-section p { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 1rem; } .content-section p:last-child { margin-bottom: 0; }  /* ── STEPS ── */ .steps { list-style: none; } .step {   display: grid; grid-template-columns: 2rem 1fr;   gap: 1rem; padding: 1.25rem 0;   border-bottom: 1px solid var(--border); } .step:last-child { border-bottom: none; } .step-n {   font-family: 'Playfair Display', serif;   font-size: 0.875rem; color: var(--teal-border);   font-style: italic; padding-top: 0.1rem; } .step-title { font-size: 0.875rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; } .step-body { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.7; }  /* ── LIVRABLES ── */ .livrables {   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));   gap: 1px; background: var(--border); border: 1px solid var(--border);   border-radius: 2px; overflow: hidden; } .livrable-item {   background: var(--white); padding: 1.25rem 1.5rem;   font-size: 0.8125rem; color: var(--ink-soft);   display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; } .livrable-item::before {   content: '→'; color: var(--teal); font-weight: 500;   flex-shrink: 0; margin-top: 0.05rem; }  /* ── KPI EVAL ── */ .kpi-list { list-style: none; } .kpi-list li {   font-size: 0.9375rem; color: var(--ink-soft);   padding: 0.6rem 0 0.6rem 1.25rem;   border-bottom: 1px solid var(--border);   position: relative; line-height: 1.6; } .kpi-list li:last-child { border-bottom: none; } .kpi-list li::before {   content: ''; position: absolute; left: 0; top: 1rem;   width: 5px; height: 5px; border-radius: 50%;   background: var(--teal); }  /* ── TOOLS ── */ .tools { display: flex; flex-wrap: wrap; gap: 8px; } .tool-chip {   font-size: 0.75rem; padding: 5px 14px;   border: 1px solid var(--border); border-radius: 2px;   color: var(--ink-soft); background: var(--white); }  /* ── REFLEXIVITY ── */ .reflexivity {   background: var(--surface); border-left: 3px solid var(--teal);   padding: 1.5rem 1.75rem; border-radius: 0 2px 2px 0;   margin-top: 1.5rem; } .reflexivity p { font-size: 0.9375rem; color: var(--ink-soft); font-style: italic; line-height: 1.8; }  /* ── PERSONAS ── */ .personas { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; margin: 1.5rem 0; } .persona { background: var(--white); padding: 1.5rem; } .persona-name { font-family: 'Playfair Display', serif; font-size: 1.125rem; font-weight: 400; color: var(--ink); margin-bottom: 0.2rem; } .persona-role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 1rem; font-weight: 500; } .persona-trait { font-size: 0.8125rem; color: var(--ink-soft); padding: 0.35rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; display: flex; gap: 0.5rem; } .persona-trait:last-child { border-bottom: none; } .persona-trait::before { content: '–'; color: var(--teal); flex-shrink: 0; }  /* ── PHASES ── */ .phases { list-style: none; } .phase-item { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); align-items: start; } .phase-item:last-child { border-bottom: none; } .phase-n { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--teal-border); font-weight: 400; line-height: 1; padding-top: 0.15rem; } .phase-title { font-size: 0.875rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; } .phase-badge { font-size: 0.6875rem; padding: 2px 8px; border-radius: 10px; background: var(--teal-light); color: var(--teal); border: 1px solid var(--teal-border); font-weight: 400; } .phase-desc { font-size: 0.8125rem; color: var(--ink-soft); line-height: 1.7; }  /* ── PAGE NAV ── */ .page-nav { display: flex; justify-content: space-between; padding: 3rem 0; border-top: 1px solid var(--border); margin-top: 2rem; } .page-nav-link { font-size: 0.8125rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; } .page-nav-link:hover { color: var(--teal); } .page-nav-link span { font-family: 'Playfair Display', serif; font-style: italic; color: var(--ink); font-size: 0.9375rem; display: block; margin-top: 0.2rem; }  @media (max-width: 640px) {   nav { padding: 0 1rem; }   .nav-links { display: none; }   main { padding: 0 1.25rem; }   .pillars { grid-template-columns: 1fr; }   .personas { grid-template-columns: 1fr; }   .about-strip { margin: 0 -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; } } </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Léa Alonso-Fanget</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#projets" class="active">Projets</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="pt-nav">
+<main>
+
+  <section class="project-hero">
+    <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+    <div class="project-hero-tags">
+      <span class="tag">Blended learning</span>
+      <span class="tag">Ingénierie de formation</span>
+      <span class="tag">Management</span>
+      <span class="tag gray">Projet OC · 2026</span>
+    </div>
+    <h1>Consultissima – Parcours Manager</h1>
+    <p class="project-hero-sub">Conception d'un programme de formation blended learning pour 32 néo-managers d'une entreprise en forte croissance — analyse des besoins, architecture pédagogique en 8 blocs, courbe d'expérience apprenante et soutenance jury.</p>
+    <div class="project-meta-bar">
+      <div class="project-meta-item">
+        <div class="project-meta-label">Secteur</div>
+        <div class="project-meta-value">Conseil / Services</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Public cible</div>
+        <div class="project-meta-value">32 néo-managers</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Format</div>
+        <div class="project-meta-value">Blended · 12 demi-journées · 3 mois</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Type</div>
+        <div class="project-meta-value">Projet OC · Certification Niv. 6</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="kpi-row">
+    <div class="kpi-item"><div class="kpi-num">32</div><div class="kpi-label">Néo-managers formés</div></div>
+    <div class="kpi-item"><div class="kpi-num">8</div><div class="kpi-label">Blocs thématiques</div></div>
+    <div class="kpi-item"><div class="kpi-num">12</div><div class="kpi-label">Demi-journées sur 3 mois</div></div>
+    <div class="kpi-item"><div class="kpi-num">5</div><div class="kpi-label">Phases de progression</div></div>
+  </div>
+
+  <section class="content-section">
+    <h2>Contexte & enjeux</h2>
+    <p>Consultissima (client fictif, secteur conseil) traverse une forte phase de croissance. L'entreprise a dû augmenter rapidement ses effectifs, créer de nouvelles équipes et promouvoir en interne des collaborateurs seniors vers des postes de managers. Résultat : une hétérogénéité forte des pratiques managériales et un besoin urgent de sécuriser la croissance par une culture commune.</p>
+    <p>Le Parcours Manager a été initié conjointement par la DRH, la Direction des Opérations et les managers eux-mêmes. L'objectif central : professionnaliser rapidement et durablement 32 néo-managers pour instaurer une culture managériale cohérente et performante, propre à Consultissima.</p>
+    <p>L'enjeu de conception était double : créer un parcours suffisamment structuré pour homogénéiser les pratiques, et suffisamment ancré dans la réalité de Consultissima pour que les managers s'y reconnaissent et y adhèrent.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Ma démarche</h2>
+    <ul class="steps">
+      <li class="step">
+        <div class="step-n">i.</div>
+        <div>
+          <div class="step-title">Analyse des besoins & rapport sur les évolutions métier</div>
+          <div class="step-body">Étude des écarts de compétences entre la situation de départ (managers non formés, pratiques hétérogènes) et la situation cible (culture managériale commune). Construction d'une grille d'entretien et analyse des données en croisant les attentes de la DRH, de la Direction des Opérations et des managers eux-mêmes.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">ii.</div>
+        <div>
+          <div class="step-title">Construction des personas</div>
+          <div class="step-body">Élaboration de fiches personas à partir des données terrain — profils motivationnels, besoins, craintes et modes d'apprentissage préférés des néo-managers. Les personas ont servi d'arbitres pour les décisions de design pédagogique tout au long de la conception.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">iii.</div>
+        <div>
+          <div class="step-title">Architecture du parcours en 8 blocs</div>
+          <div class="step-body">Conception d'un parcours blended en 12 demi-journées sur 3 mois, organisé en 8 blocs thématiques progressifs. Les méthodes pédagogiques ont été dosées selon les besoins identifiés : 60% expérientielles, 25% interrogatives, 15% magistrales — un dosage justifié par la résistance naturelle de ce public à la théorie pure.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">iv.</div>
+        <div>
+          <div class="step-title">Courbe d'expérience apprenante</div>
+          <div class="step-body">Modélisation du parcours émotionnel des managers sur les 12 demi-journées, en croisant attentes, craintes latentes et dispositifs de soutien intégrés à chaque étape. Un outil de pilotage pédagogique autant que de communication avec le commanditaire.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">v.</div>
+        <div>
+          <div class="step-title">Soutenance jury</div>
+          <div class="step-body">Présentation de 30 minutes devant jury en identité visuelle Consultissima — 13 slides en 3 parties (caractéristiques, architecture, expérience apprenante), script oral minuté et anticipation des questions de discussion.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Les 8 blocs du parcours</h2>
+    <ul class="phases">
+      <li class="phase-item">
+        <div class="phase-n">0</div>
+        <div>
+          <div class="phase-title">Lancement & auto-diagnostic <span class="phase-badge">DJ 1</span></div>
+          <div class="phase-desc">Construction de la dynamique de groupe. Auto-diagnostic managérial individuel. Bloc fondateur : on ne peut pas apprendre si les apprenants ne se sentent pas en sécurité.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">1–2</div>
+        <div>
+          <div class="phase-title">Rôle, posture & styles managériaux <span class="phase-badge">DJ 2–5</span></div>
+          <div class="phase-desc">Co-construction d'un portrait du manager Consultissima. Exploration et appropriation des styles de management individuels, ancrés dans la culture de l'entreprise.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">3</div>
+        <div>
+          <div class="phase-title">Fixation & pilotage des objectifs <span class="phase-badge">DJ 6</span></div>
+          <div class="phase-desc">Compétence identifiée comme prioritaire par la Direction des Opérations. Méthodes de définition d'objectifs, indicateurs de suivi, entretiens de pilotage.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">4–5</div>
+        <div>
+          <div class="phase-title">Animation, motivation & délégation <span class="phase-badge">DJ 7–9</span></div>
+          <div class="phase-desc">Techniques d'animation d'équipe, leviers de motivation individuels et collectifs, construction de matrices RACI pour structurer la délégation.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">6</div>
+        <div>
+          <div class="phase-title">Expérimentation terrain <span class="phase-badge">DJ 10</span></div>
+          <div class="phase-desc">Mise en œuvre d'une action managériale concrète en conditions réelles. Retour d'expérience collectif. Point de bascule : passage de l'apprentissage à l'action.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">7</div>
+        <div>
+          <div class="phase-title">Gestion du temps & plan d'actions managérial <span class="phase-badge">DJ 11–12</span></div>
+          <div class="phase-desc">Formalisation du plan d'actions managérial personnel — évaluation finale opérationnelle, validée par la RH et la Direction des Opérations. Un document de travail réel, pas un exercice de forme.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Livrables produits</h2>
+    <div class="livrables">
+      <div class="livrable-item">Rapport sur les évolutions métier</div>
+      <div class="livrable-item">Grille d'entretien analysée</div>
+      <div class="livrable-item">Fiches personas néo-managers</div>
+      <div class="livrable-item">Synopsis du parcours (8 blocs)</div>
+      <div class="livrable-item">Courbe d'expérience apprenante</div>
+      <div class="livrable-item">PPTX soutenance 13 slides (identité Consultissima)</div>
+      <div class="livrable-item">Script oral minuté (30 min)</div>
+      <div class="livrable-item">Anticipation questions jury</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Ce que j'aurais mesuré</h2>
+    <ul class="kpi-list">
+      <li>Taux de complétion par demi-journée (objectif : ≥ 90%)</li>
+      <li>Score aux quiz d'évaluation des acquis à chaque bloc thématique</li>
+      <li>Qualité du plan d'actions managérial final : évaluation croisée manager + RH + Direction des Opérations</li>
+      <li>NPS managers à mi-parcours et en fin de parcours — sentiment d'utilité et d'applicabilité perçues</li>
+      <li>Homogénéisation des pratiques : dispersion des scores managériaux pré/post via l'auto-diagnostic</li>
+      <li>Suivi à 3 mois : mise en œuvre effective du plan d'actions et feedback des équipes managées</li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Outils & compétences mobilisés</h2>
+    <div class="tools">
+      <span class="tool-chip">Ingénierie de formation</span>
+      <span class="tool-chip">Analyse des besoins</span>
+      <span class="tool-chip">Construction de personas</span>
+      <span class="tool-chip">Architecture pédagogique</span>
+      <span class="tool-chip">Blended learning design</span>
+      <span class="tool-chip">Expérience apprenante</span>
+      <span class="tool-chip">Évaluation des acquis</span>
+      <span class="tool-chip">Identité visuelle PPTX</span>
+      <span class="tool-chip">Communication orale jury</span>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Réflexivité</h2>
+    <div class="reflexivity">
+      <p>Ce projet m'a appris que la courbe d'expérience apprenante n'est pas un outil de présentation — c'est un outil de conception. La construire m'a obligée à penser chaque demi-journée non pas en termes de contenus à transmettre, mais en termes d'état émotionnel de l'apprenant : qu'est-ce qui pourrait le freiner ici ? Quel dispositif permet de lever ce frein ? Cette question systématique a changé plusieurs de mes choix pédagogiques en cours de route. Avec du recul, je l'intègrerai dès la phase d'analyse dans mes prochains projets — pas comme livrable final, mais comme outil de travail tout au long de la conception.</p>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="projet-teleazy.html" class="page-nav-link">
+      ← Projet précédent<span>TelEazy – Reskilling techniciens</span>
+    </a>
+    <div></div>
+  </div>
+
+</main>
+</div>
+
+<footer>
+  <p>© 2026 Léa Alonso-Fanget · Auctus Conseil · Lyon</p>
+</footer>
+
+</body>
+</html>
