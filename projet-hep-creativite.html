@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réseau Éducatif – Atelier Créativité · Léa Alonso-Fanget</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');  :root {   --teal: #0F6E56;   --teal-mid: #1D9E75;   --teal-light: #E1F5EE;   --teal-border: #9FE1CB;   --ink: #1A1A1A;   --ink-soft: #444;   --muted: #888;   --surface: #F7F6F3;   --white: #FFFFFF;   --border: #E5E3DC;   --max: 900px; }  * { box-sizing: border-box; margin: 0; padding: 0; }  html { scroll-behavior: smooth; }  body {   font-family: 'DM Sans', sans-serif;   font-weight: 400;   color: var(--ink);   background: var(--white);   line-height: 1.7;   -webkit-font-smoothing: antialiased; }  /* ── NAV ── */ nav {   position: fixed; top: 0; left: 0; right: 0; z-index: 100;   background: rgba(255,255,255,0.92);   backdrop-filter: blur(12px);   border-bottom: 1px solid var(--border);   padding: 0 2rem;   height: 56px;   display: flex; align-items: center; justify-content: space-between; } .nav-brand {   font-family: 'Playfair Display', serif;   font-size: 1rem; font-weight: 500;   color: var(--ink); text-decoration: none;   letter-spacing: 0.01em; } .nav-links { display: flex; gap: 2rem; list-style: none; } .nav-links a {   font-size: 0.8125rem; font-weight: 400;   color: var(--muted); text-decoration: none;   letter-spacing: 0.02em;   transition: color 0.2s; } .nav-links a:hover { color: var(--teal); } .nav-links a.active { color: var(--ink); font-weight: 500; }  /* ── LAYOUT ── */ main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; } .pt-nav { padding-top: 56px; }  /* ── HERO ── */ .hero {   padding: 6rem 0 4rem;   border-bottom: 1px solid var(--border); } .hero-eyebrow {   font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;   color: var(--teal); font-weight: 500; margin-bottom: 1.5rem;   display: flex; align-items: center; gap: 0.75rem; } .hero-eyebrow::before {   content: ''; display: inline-block;   width: 24px; height: 1px; background: var(--teal); } .hero h1 {   font-family: 'Playfair Display', serif;   font-size: clamp(2.5rem, 5vw, 3.75rem);   font-weight: 400; line-height: 1.15;   color: var(--ink); margin-bottom: 1.5rem;   letter-spacing: -0.01em; } .hero h1 em { font-style: italic; color: var(--teal); } .hero-sub {   font-size: 1.0625rem; color: var(--ink-soft);   max-width: 560px; line-height: 1.75;   margin-bottom: 2.5rem; } .hero-meta {   display: flex; gap: 2rem; flex-wrap: wrap; } .hero-meta-item {   font-size: 0.8125rem; color: var(--muted);   display: flex; align-items: center; gap: 0.4rem; } .hero-meta-item strong { color: var(--ink); font-weight: 500; }  /* ── PILLARS ── */ .pillars {   display: grid; grid-template-columns: repeat(3, 1fr);   gap: 1px; background: var(--border);   border: 1px solid var(--border); border-radius: 2px;   margin: 4rem 0;   overflow: hidden; } .pillar {   background: var(--white); padding: 2rem 1.75rem; } .pillar-num {   font-family: 'Playfair Display', serif;   font-size: 2rem; color: var(--teal-border);   font-weight: 400; line-height: 1; margin-bottom: 1rem; } .pillar h3 {   font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em;   text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; } .pillar p { font-size: 0.8125rem; color: var(--muted); line-height: 1.6; }  /* ── SECTION TITLE ── */ .section-label {   font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase;   color: var(--teal); font-weight: 500;   display: flex; align-items: center; gap: 0.75rem; margin-bottom: 2.5rem; } .section-label::after {   content: ''; flex: 1; height: 1px; background: var(--border); }  /* ── PROJECT CARDS ── */ .projects { padding: 4rem 0; } .project-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; } .project-card {   background: var(--white);   padding: 2.5rem 2rem;   display: grid; grid-template-columns: 1fr auto;   gap: 1.5rem; align-items: start;   text-decoration: none; color: inherit;   transition: background 0.2s; } .project-card:hover { background: var(--surface); } .project-card:hover .arrow { transform: translate(4px, -4px); } .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; } .tag {   font-size: 0.6875rem; padding: 3px 10px; border-radius: 20px;   background: var(--teal-light); color: var(--teal);   font-weight: 500; letter-spacing: 0.03em;   border: 1px solid var(--teal-border); } .tag.gray { background: var(--surface); color: var(--muted); border-color: var(--border); } .project-title {   font-family: 'Playfair Display', serif;   font-size: 1.375rem; font-weight: 400; margin-bottom: 0.5rem;   color: var(--ink); line-height: 1.3; } .project-desc { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.7; max-width: 520px; } .arrow {   font-size: 1.25rem; color: var(--muted);   transition: transform 0.2s, color 0.2s;   margin-top: 0.25rem; } .project-card:hover .arrow { color: var(--teal); }  /* ── ABOUT STRIP ── */ .about-strip {   background: var(--surface); border-top: 1px solid var(--border);   border-bottom: 1px solid var(--border);   padding: 3.5rem 0; margin: 0 -2rem;   padding-left: 2rem; padding-right: 2rem; } .baseline {   font-family: 'Playfair Display', serif;   font-size: clamp(1.125rem, 2.5vw, 1.5rem);   font-style: italic; color: var(--ink);   max-width: 640px; line-height: 1.5;   margin-bottom: 1rem; } .about-strip p { font-size: 0.875rem; color: var(--muted); max-width: 560px; }  /* ── CONTACT ── */ .contact { padding: 4rem 0; display: flex; gap: 1.5rem; flex-wrap: wrap; } .contact-link {   font-size: 0.8125rem; font-weight: 500;   color: var(--ink); text-decoration: none;   padding: 0.6rem 1.25rem;   border: 1px solid var(--border); border-radius: 2px;   display: flex; align-items: center; gap: 0.5rem;   transition: all 0.2s; letter-spacing: 0.02em; } .contact-link:hover { border-color: var(--teal); color: var(--teal); }  /* ── FOOTER ── */ footer {   border-top: 1px solid var(--border);   padding: 2rem; text-align: center;   font-size: 0.75rem; color: var(--muted); }  /* ── PROJECT PAGE ── */ .project-hero {   padding: 5rem 0 3rem;   border-bottom: 1px solid var(--border); } .back-link {   font-size: 0.8125rem; color: var(--muted);   text-decoration: none; display: inline-flex;   align-items: center; gap: 0.4rem;   margin-bottom: 2.5rem;   transition: color 0.2s; } .back-link:hover { color: var(--teal); } .project-hero-tags { margin-bottom: 1.25rem; display: flex; gap: 6px; flex-wrap: wrap; } .project-hero h1 {   font-family: 'Playfair Display', serif;   font-size: clamp(2rem, 4vw, 2.875rem);   font-weight: 400; line-height: 1.2;   color: var(--ink); margin-bottom: 1rem; } .project-hero-sub { font-size: 1rem; color: var(--ink-soft); max-width: 600px; line-height: 1.75; } .project-meta-bar {   display: flex; gap: 2.5rem; flex-wrap: wrap;   padding: 1.5rem 0; border-top: 1px solid var(--border);   margin-top: 2rem; } .project-meta-item { } .project-meta-label { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.2rem; } .project-meta-value { font-size: 0.875rem; font-weight: 500; color: var(--ink); }  /* ── KPI ROW ── */ .kpi-row {   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));   gap: 1px; background: var(--border);   border: 1px solid var(--border); border-radius: 2px;   margin: 3rem 0; overflow: hidden; } .kpi-item { background: var(--white); padding: 1.5rem; } .kpi-num {   font-family: 'Playfair Display', serif;   font-size: 1.75rem; color: var(--teal);   font-weight: 400; line-height: 1; margin-bottom: 0.4rem; } .kpi-label { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }  /* ── CONTENT SECTIONS ── */ .content-section { padding: 3rem 0; border-bottom: 1px solid var(--border); } .content-section:last-of-type { border-bottom: none; } .content-section h2 {   font-family: 'Playfair Display', serif;   font-size: 1.375rem; font-weight: 400;   color: var(--ink); margin-bottom: 1.5rem; } .content-section p { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.8; margin-bottom: 1rem; } .content-section p:last-child { margin-bottom: 0; }  /* ── STEPS ── */ .steps { list-style: none; } .step {   display: grid; grid-template-columns: 2rem 1fr;   gap: 1rem; padding: 1.25rem 0;   border-bottom: 1px solid var(--border); } .step:last-child { border-bottom: none; } .step-n {   font-family: 'Playfair Display', serif;   font-size: 0.875rem; color: var(--teal-border);   font-style: italic; padding-top: 0.1rem; } .step-title { font-size: 0.875rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; } .step-body { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.7; }  /* ── LIVRABLES ── */ .livrables {   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));   gap: 1px; background: var(--border); border: 1px solid var(--border);   border-radius: 2px; overflow: hidden; } .livrable-item {   background: var(--white); padding: 1.25rem 1.5rem;   font-size: 0.8125rem; color: var(--ink-soft);   display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; } .livrable-item::before {   content: '→'; color: var(--teal); font-weight: 500;   flex-shrink: 0; margin-top: 0.05rem; }  /* ── KPI EVAL ── */ .kpi-list { list-style: none; } .kpi-list li {   font-size: 0.9375rem; color: var(--ink-soft);   padding: 0.6rem 0 0.6rem 1.25rem;   border-bottom: 1px solid var(--border);   position: relative; line-height: 1.6; } .kpi-list li:last-child { border-bottom: none; } .kpi-list li::before {   content: ''; position: absolute; left: 0; top: 1rem;   width: 5px; height: 5px; border-radius: 50%;   background: var(--teal); }  /* ── TOOLS ── */ .tools { display: flex; flex-wrap: wrap; gap: 8px; } .tool-chip {   font-size: 0.75rem; padding: 5px 14px;   border: 1px solid var(--border); border-radius: 2px;   color: var(--ink-soft); background: var(--white); }  /* ── REFLEXIVITY ── */ .reflexivity {   background: var(--surface); border-left: 3px solid var(--teal);   padding: 1.5rem 1.75rem; border-radius: 0 2px 2px 0;   margin-top: 1.5rem; } .reflexivity p { font-size: 0.9375rem; color: var(--ink-soft); font-style: italic; line-height: 1.8; }  /* ── PERSONAS ── */ .personas { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; margin: 1.5rem 0; } .persona { background: var(--white); padding: 1.5rem; } .persona-name { font-family: 'Playfair Display', serif; font-size: 1.125rem; font-weight: 400; color: var(--ink); margin-bottom: 0.2rem; } .persona-role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 1rem; font-weight: 500; } .persona-trait { font-size: 0.8125rem; color: var(--ink-soft); padding: 0.35rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; display: flex; gap: 0.5rem; } .persona-trait:last-child { border-bottom: none; } .persona-trait::before { content: '–'; color: var(--teal); flex-shrink: 0; }  /* ── PHASES ── */ .phases { list-style: none; } .phase-item { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); align-items: start; } .phase-item:last-child { border-bottom: none; } .phase-n { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--teal-border); font-weight: 400; line-height: 1; padding-top: 0.15rem; } .phase-title { font-size: 0.875rem; font-weight: 500; color: var(--ink); margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; } .phase-badge { font-size: 0.6875rem; padding: 2px 8px; border-radius: 10px; background: var(--teal-light); color: var(--teal); border: 1px solid var(--teal-border); font-weight: 400; } .phase-desc { font-size: 0.8125rem; color: var(--ink-soft); line-height: 1.7; }  /* ── PAGE NAV ── */ .page-nav { display: flex; justify-content: space-between; padding: 3rem 0; border-top: 1px solid var(--border); margin-top: 2rem; } .page-nav-link { font-size: 0.8125rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; } .page-nav-link:hover { color: var(--teal); } .page-nav-link span { font-family: 'Playfair Display', serif; font-style: italic; color: var(--ink); font-size: 0.9375rem; display: block; margin-top: 0.2rem; }  @media (max-width: 640px) {   nav { padding: 0 1rem; }   .nav-links { display: none; }   main { padding: 0 1.25rem; }   .pillars { grid-template-columns: 1fr; }   .personas { grid-template-columns: 1fr; }   .about-strip { margin: 0 -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; } } </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">Léa Alonso-Fanget</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#projets" class="active">Projets</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="pt-nav">
+<main>
+
+  <section class="project-hero">
+    <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+    <div class="project-hero-tags">
+      <span class="tag">Facilitation · Présentiel</span>
+      <span class="tag">Ingénierie de formation</span>
+      <span class="tag">Compétences transversales</span>
+      <span class="tag gray">Réalisation HEP · 2019–2024</span>
+    </div>
+    <h1>Atelier Créativité – Expérience pédagogique d'intégration</h1>
+    <p class="project-hero-sub">Conception et déploiement d'un atelier pédagogique expérientiel sur la créativité, à destination des apprenants de première année d'un grand réseau d'enseignement supérieur — 30 établissements, plusieurs milliers d'apprenants par promotion.</p>
+    <div class="project-meta-bar">
+      <div class="project-meta-item">
+        <div class="project-meta-label">Secteur</div>
+        <div class="project-meta-value">Enseignement supérieur privé</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Public cible</div>
+        <div class="project-meta-value">Apprenants 1re année · 25 par groupe</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Format</div>
+        <div class="project-meta-value">Présentiel · 150 minutes · 4 séquences</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Déploiement</div>
+        <div class="project-meta-value">30+ établissements · réseau national</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="kpi-row">
+    <div class="kpi-item"><div class="kpi-num">30+</div><div class="kpi-label">Établissements déployés</div></div>
+    <div class="kpi-item"><div class="kpi-num">150'</div><div class="kpi-label">Par session · 4 séquences</div></div>
+    <div class="kpi-item"><div class="kpi-num">25</div><div class="kpi-label">Apprenants par groupe inter-marques</div></div>
+    <div class="kpi-item"><div class="kpi-num">5</div><div class="kpi-label">Compétences du parcours éducatif</div></div>
+  </div>
+
+  <section class="content-section">
+    <h2>Contexte & enjeux</h2>
+    <p>Un grand réseau d'enseignement supérieur privé (30+ écoles et centres de formation) souhaitait créer une expérience pédagogique commune à tous ses apprenants de première année — quelle que soit leur école ou leur filière. L'objectif : lancer un parcours de développement des compétences humaines (créativité, esprit critique, éthique, coopération, leadership) par une expérience forte, mémorable, et distincte des cours habituels.</p>
+    <p>L'enjeu de conception était double : créer un dispositif suffisamment robuste pour être animé par des facilitateurs aux profils très variés dans des conditions logistiques différentes (salles, matériel, volumétrie), et suffisamment engageant pour déclencher une expérience émotionnelle réelle chez des apprenants qui ne se connaissent pas.</p>
+    <p>La contrainte créative retenue : produire des affiches contestataires avec seulement des feutres et du papier, en s'inspirant des Ateliers Populaires des Beaux-Arts de Mai 1968 — une contrainte volontaire pour sortir les apprenants de leur zone de confort numérique.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Ma démarche</h2>
+    <ul class="steps">
+      <li class="step">
+        <div class="step-n">i.</div>
+        <div>
+          <div class="step-title">Cadrage pédagogique & design de l'expérience</div>
+          <div class="step-body">Définition des objectifs pédagogiques et des compétences visées. Choix du concept créatif (atelier affichage contestataire) et de la mécanique pédagogique (production collective, vote, mesure d'impact). Conception de la progression en 4 séquences articulées autour de trois valeurs : bienveillance, confiance, souveraineté.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">ii.</div>
+        <div>
+          <div class="step-title">Production des outils facilitateurs</div>
+          <div class="step-body">Rédaction du conducteur pédagogique complet (12 pages) : vue d'ensemble, séquençage minuté, suggestions de jeux d'inclusion adaptés aux contraintes de salle, gestion des cas difficiles (syndrome de la page blanche, causes inappropriées). Création du support d'animation PowerPoint (10 slides). Production du mémo/checklist facilitateurs pour le déploiement autonome.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">iii.</div>
+        <div>
+          <div class="step-title">Design de la facilitation différenciée</div>
+          <div class="step-body">Anticipation de toutes les situations critiques (apprenants bloqués, causes problématiques, salles non modulables) avec des solutions opérationnelles pour chaque cas. Trois jeux d'inclusion documentés selon la configuration de salle. Un protocole de vote rigoureux (critères objectif + émotionnel) pour la sélection de l'affiche représentative.</div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-n">iv.</div>
+        <div>
+          <div class="step-title">Mesure d'impact & suivi réseau</div>
+          <div class="step-body">Intégration d'un questionnaire de mesure d'impact en clôture (QR Code). Protocole de remontée des productions (photo affiche élue + cause associée) vers l'équipe centrale pour capitalisation et amélioration continue à l'échelle du réseau.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Les 4 séquences de l'atelier</h2>
+    <ul class="phases">
+      <li class="phase-item">
+        <div class="phase-n">1</div>
+        <div>
+          <div class="phase-title">Inclusion <span class="phase-badge">20 min</span></div>
+          <div class="phase-desc">Accueil d'un groupe inter-marques (apprenants d'écoles différentes ne se connaissant pas). Jeux d'inclusion adaptables selon la configuration de salle (Tekitoi, Le Taboo, La Pelotte de laine). Constitution des binômes/trinômes de travail en favorisant la mixité des établissements.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">2</div>
+        <div>
+          <div class="phase-title">Introduction & cadre <span class="phase-badge">10 min</span></div>
+          <div class="phase-desc">Contextualisation de l'atelier dans le parcours éducatif. Présentation des enjeux sociétaux et du rôle de la créativité. Pose du cadre pédagogique (bienveillance, confiance, souveraineté) et des objectifs de la session.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">3</div>
+        <div>
+          <div class="phase-title">Atelier de créativité <span class="phase-badge">110 min</span></div>
+          <div class="phase-desc">Introduction historique (Ateliers Populaires, Mai 1968, vidéo d'expert). Exploration des affiches d'inspiration. Production en binômes/trinômes d'affiches contestataires sur une cause choisie — avec seulement des feutres et du papier. Phase de vote collectif (critères objectif + émotionnel). La contrainte matérielle comme levier de créativité.</div>
+        </div>
+      </li>
+      <li class="phase-item">
+        <div class="phase-n">4</div>
+        <div>
+          <div class="phase-title">Conclusion & mesure <span class="phase-badge">10 min</span></div>
+          <div class="phase-desc">Valorisation des productions et des apprentissages réalisés. Administration du questionnaire de mesure d'impact. Remontée de l'affiche élue vers l'équipe réseau.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Livrables produits</h2>
+    <div class="livrables">
+      <div class="livrable-item">Conducteur pédagogique complet (12 pages)</div>
+      <div class="livrable-item">Support d'animation PowerPoint (10 slides)</div>
+      <div class="livrable-item">Mémo / checklist facilitateurs (2 pages)</div>
+      <div class="livrable-item">3 jeux d'inclusion documentés</div>
+      <div class="livrable-item">Protocole de gestion des cas difficiles</div>
+      <div class="livrable-item">Protocole de mesure d'impact & remontée réseau</div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Ce que j'ai mesuré</h2>
+    <ul class="kpi-list">
+      <li>Taux de participation au questionnaire de mesure d'impact en clôture (administré à chaque session)</li>
+      <li>Qualité perçue de l'expérience par les apprenants (NPS session)</li>
+      <li>Remontée des productions (affiche élue + cause) : capitalisation réseau pour les éditions suivantes</li>
+      <li>Retours qualitatifs des facilitateurs : utilisabilité du conducteur et du mémo en conditions réelles</li>
+      <li>Déploiement effectif : nombre d'établissements ayant animé l'atelier par promotion</li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2>Outils & compétences mobilisés</h2>
+    <div class="tools">
+      <span class="tool-chip">Ingénierie de formation</span>
+      <span class="tool-chip">Design de facilitation</span>
+      <span class="tool-chip">Pédagogie expérientielle</span>
+      <span class="tool-chip">Conducteur pédagogique</span>
+      <span class="tool-chip">Formation de formateurs</span>
+      <span class="tool-chip">Gestion de projet réseau</span>
+      <span class="tool-chip">Mesure d'impact</span>
+      <span class="tool-chip">PowerPoint</span>
+      <span class="tool-chip">Déploiement multi-sites</span>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Réflexivité</h2>
+    <div class="reflexivity">
+      <p>Ce projet m'a appris que la robustesse d'un dispositif pédagogique se joue dans la qualité des outils remis aux facilitateurs — pas dans la sophistication du concept. Un atelier brillant sur le papier peut échouer si le facilitateur n'est pas suffisamment outillé pour gérer les imprévus. C'est pourquoi j'ai investi autant dans le mémo et le conducteur que dans le design de l'expérience elle-même. La contrainte "feutres et papier uniquement" était aussi un pari pédagogique fort : j'ai appris que la contrainte, bien posée, libère davantage qu'elle ne bloque — à condition de l'expliquer et de la tenir.</p>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="projet-consultissima.html" class="page-nav-link">
+      ← Projet précédent<span>Consultissima – Formation managers</span>
+    </a>
+    <a href="projet-hep-espritcritique.html" class="page-nav-link">
+      Projet suivant →<span>Réseau Éducatif – Fresque de l'Esprit Critique</span>
+    </a>
+  </div>
+
+</main>
+</div>
+
+<footer>
+  <p>© 2026 Léa Alonso-Fanget · Auctus Conseil · Lyon</p>
+</footer>
+
+</body>
+</html>
